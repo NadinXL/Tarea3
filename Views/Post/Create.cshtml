@@ -1,0 +1,33 @@
+@model Tarea3.DTO.PostDTO
+
+@{
+    ViewData["Title"] = "Create Post";
+}
+
+<h1>Create Post</h1>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="title" class="control-label"></label>
+        <input asp-for="title" class="form-control" />
+        <span asp-validation-for="title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="body" class="control-label"></label>
+        <textarea asp-for="body" class="form-control" rows="4"></textarea>
+        <span asp-validation-for="body" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="userId" class="control-label"></label>
+        <input asp-for="userId" class="form-control" />
+        <span asp-validation-for="userId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>

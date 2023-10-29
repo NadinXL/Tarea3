@@ -1,0 +1,26 @@
+@model Tarea3.DTO.PostDTO
+
+@{
+    ViewData["Title"] = "Detalles del Post";
+}
+
+<h1>Detalles del Post</h1>
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.id)</th>
+        <td>@Model.id</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.title)</th>
+        <td>@Model.title</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.body)</th>
+        <td>@Model.body</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.userId)</th>
+        <td>@Model.userId</td>
+    </tr>
+</table>
+<a class="btn btn-primary" asp-action="Index">Volver a la lista de posts</a>
